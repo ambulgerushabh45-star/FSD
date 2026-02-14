@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repositories Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>GitHub Repositories</h2>
+
+        <label for="username">Enter GitHub Username:</label>
+        <input type="text" id="username" placeholder="e.g. octocat">
+        <button id="fetchBtn">Get Repositories</button>
+
+        <p id="errorMsg"></p>
+
+        <table id="repoTable">
+            <thead>
+                <tr>
+                    <th>Repository Name</th>
+                    <th>Description</th>
+                    <th>URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Repositories will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
