@@ -1,30 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation Example</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rushabh Ambulge - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #333;
+    }
+
+    header p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      color: #444;
+      border-left: 4px solid #667eea;
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+
+    ul li {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 20px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #5a67d8;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <form id="signupForm">
-            <h2>Sign Up</h2>
+  <div class="container">
+    <header>
+      <h1>Rushabh Sachin Ambulge</h1>
+      <p>Email: ambulgerushabh45@email.com | Phone: 9923899000</p>
+    </header>
 
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name">
-
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email">
-
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter your password">
-
-            <button type="submit">Submit</button>
-            <p id="errorMsg"></p>
-        </form>
+    <div class="section">
+      <h2>About Me</h2>
+      <p>
+        I am a dedicated and curious student with a strong interest in technology and web development. I enjoy working on challenging projects that enhance my problem-solving skills. I have experience with HTML, CSS, JavaScript, Java, and Python, and I am passionate about building clean, user-friendly applications. I am always eager to learn new technologies and continuously improve my skills.
+      </p>
     </div>
 
-    <script src="script.js"></script>
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li>Hostel Management System App</li>
+        <li>Portfolio Website</li>
+        <li>Calculator App</li>
+      </ul>
+    </div>
+
+    <button class="btn" onclick="changeTheme()">Toggle Theme</button>
+  </div>
+
+  <script>
+    function changeTheme() {
+      const body = document.body;
+      if (body.style.background.includes('black')) {
+        body.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+        body.style.color = 'black';
+      } else {
+        body.style.background = 'black';
+        body.style.color = 'white';
+      }
+    }
+  </script>
 </body>
 </html>
